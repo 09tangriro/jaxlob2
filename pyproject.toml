@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "jaxlob2"
+version = "0.1.0"
+description = "Limit order book simulations in JAX"
+authors = ["Rohan Tangri <rohan.tangri@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+jax = "^0.4.31"
+jaxlib = "^0.4.31"
+gymnax = "^0.0.8"
+pandas = "^2.2.2"
+chex = "^0.1.86"
+tqdm = "^4.66.5"
+py7zr = "^0.21.1"
+
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.8.0"
+isort = "^5.13.2"
+black = "^24.8.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
