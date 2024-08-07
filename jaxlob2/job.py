@@ -74,8 +74,8 @@ def _remove_zero_neg_quant(orders: jnp.ndarray) -> jnp.ndarray:
     """
     return jnp.where(
         (orders[:, Order.QUANTITY_IDX] <= 0).reshape((orders.shape[0], 1)),
-        x=(jnp.ones(orders.shape) * -1).astype(jnp.int32),
-        y=orders,
+        (jnp.ones(orders.shape) * -1).astype(jnp.int32),
+        orders,
     )
 
 
